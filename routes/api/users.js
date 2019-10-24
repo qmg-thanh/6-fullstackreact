@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const gravatar = require("gravatar");
 const { check, validationResult } = require("express-validator/check");
 
 const User = require("../../models/User");
@@ -29,6 +30,18 @@ router.post(
         return res.status(400).json({ errors: [{ msg: "User already exists" }] });
       }
       // Get users gravatar
+      const avatar = gravatar.url(email, {
+        s: "200",
+        r: "pg",
+        d: "mm"
+      });
+
+      user = new User({
+        name,
+        email,
+        avatar,
+        password
+      });
 
       // Encrypt password
 
