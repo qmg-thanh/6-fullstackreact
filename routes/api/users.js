@@ -59,6 +59,8 @@ router.post(
         if (err) throw err;
         res.json({ token });
       });
+
+      //so we can get a JWT back that has the user ID payload. we need to send that token back to authenticate an access protected routes.
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server error");
