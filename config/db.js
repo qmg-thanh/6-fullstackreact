@@ -7,7 +7,8 @@ const connectDB = () => {
     mongoose.connect(
       db,
       {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useCreateIndex: true
       }
     );
 
