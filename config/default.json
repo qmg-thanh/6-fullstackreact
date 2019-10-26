@@ -1,4 +1,6 @@
 {
-  "mongoURI": "mongodb+srv://tnguyen:tnguyen@cluster0-nh7fe.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtToken": "mysecrettoken"
+  "mongoURI": "mongodb://localhost:27017",
+  "jwtToken": "mysecrettoken",
+  "githubClientId": "1e4e7c2554cc4b28193b",
+  "githubSecret": "02eb4f699a3d88ec241020f0b7ae49b680b9a3d1"
 }
